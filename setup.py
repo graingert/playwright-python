@@ -60,7 +60,7 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
         platform_map = {
             "darwin": "mac",
             "linux": "linux",
-            "win32": "win32_x64" if sys.maxsize > 2 ** 32 else "win32",
+            "win32": "win32_x64" if sys.maxsize > 2**32 else "win32",
         }
         for platform in ["mac", "linux", "win32", "win32_x64"]:
             zip_file = f"driver/playwright-{driver_version}-{platform}.zip"
